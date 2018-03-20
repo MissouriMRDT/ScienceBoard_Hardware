@@ -31,16 +31,17 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:MRDT-Actives
-LIBS:MRDT-Connectors
-LIBS:MRDT-Devices
-LIBS:MRDT-Drill_Holes
-LIBS:MRDT-Headers
-LIBS:MRDT-ICs
-LIBS:MRDT-Passives
-LIBS:MRDT-Shields
-LIBS:MRDT-Silkscreens
-LIBS:MRDT-Switches
+LIBS:MRDT_Actives
+LIBS:MRDT_Connectors
+LIBS:MRDT_Devices
+LIBS:MRDT_Drill_Holes
+LIBS:MRDT_Headers
+LIBS:MRDT_ICs
+LIBS:MRDT_Passives
+LIBS:MRDT_Shields
+LIBS:MRDT_Silkscreens
+LIBS:MRDT_Switches
+LIBS:Science Signals Booster-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -304,7 +305,7 @@ Wire Wire Line
 Wire Wire Line
 	8850 2300 8850 2350
 Wire Notes Line
-	10000 6450 10000 500 
+	10000 500  10000 6450
 Wire Wire Line
 	8900 3050 9200 3050
 Wire Wire Line
@@ -352,7 +353,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 1200 9100 1200
 Wire Notes Line
-	10000 500  4000 500 
+	1750 500  10000 500 
 Wire Notes Line
 	7650 1650 10000 1650
 Wire Notes Line
@@ -416,4 +417,32 @@ Text GLabel 5200 5350 0    49   Input ~ 0
 LINEAR_ENCODER_T2CCP0
 Wire Wire Line
 	5200 5350 5400 5350
+$Comp
+L OKI U?
+U 1 1 5AB04F9D
+P 2700 2200
+F 0 "U?" H 2550 1950 60  0001 C CNN
+F 1 "3V3 OKI" H 2850 2550 60  0000 C CNN
+F 2 "" H 2450 2100 60  0001 C CNN
+F 3 "" H 2450 2100 60  0001 C CNN
+	1    2700 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Anderson_3 C?
+U 1 1 5AB04FDB
+P 2750 1600
+F 0 "C?" H 2800 1550 60  0000 C CNN
+F 1 "Anderson_3" H 2900 2350 60  0000 C CNN
+F 2 "" H 2800 1050 60  0001 C CNN
+F 3 "" H 2800 1050 60  0001 C CNN
+	1    2750 1600
+	1    0    0    -1  
+$EndComp
+Text Notes 1800 700  0    98   ~ 0
+Power and Filtering
+Wire Notes Line
+	1750 500  1750 2350
+Wire Notes Line
+	1750 2350 4000 2350
 $EndSCHEMATC
