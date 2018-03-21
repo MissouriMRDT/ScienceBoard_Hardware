@@ -57,7 +57,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 7700 3650 0    98   ~ 0
-Laser Control
+Laser Control (recreate using circuit from last years board)
 $Comp
 L +3.3V #PWR?
 U 1 1 5AA82256
@@ -115,8 +115,6 @@ F 3 "" H 8700 4800 50  0001 C CNN
 	1    8700 4800
 	0    1    1    0   
 $EndComp
-Text Notes 7850 5100 0    49   ~ 0
-Need to determine resistance \nbetween gate and source
 $Comp
 L Molex_SL-10 U?
 U 1 1 5AA82860
@@ -422,7 +420,7 @@ L OKI U?
 U 1 1 5AB04F9D
 P 2700 2200
 F 0 "U?" H 2550 1950 60  0001 C CNN
-F 1 "3V3 OKI" H 2850 2550 60  0000 C CNN
+F 1 "5V OKI" H 2850 2550 60  0000 C CNN
 F 2 "" H 2450 2100 60  0001 C CNN
 F 3 "" H 2450 2100 60  0001 C CNN
 	1    2700 2200
@@ -440,9 +438,40 @@ F 3 "" H 2800 1050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 1800 700  0    98   ~ 0
-Power and Filtering
+Power
 Wire Notes Line
 	1750 500  1750 2350
 Wire Notes Line
 	1750 2350 4000 2350
+$Comp
+L GND #PWR?
+U 1 1 5AB05B69
+P 2300 2100
+F 0 "#PWR?" H 2300 1850 50  0001 C CNN
+F 1 "GND" H 2300 1950 50  0000 C CNN
+F 2 "" H 2300 2100 50  0001 C CNN
+F 3 "" H 2300 2100 50  0001 C CNN
+	1    2300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2100 2300 2050
+Wire Wire Line
+	2300 2050 2500 2050
+Text GLabel 2400 1250 0    49   Input ~ 0
+PVDD
+Text Notes 6100 3650 0    49   ~ 0
+Connect all GNDs
+Text Notes 2000 2750 0    49   ~ 0
+Contact Nicole and Rausch about flap \nand carosal labels in eagle schematic for last\nyears board\n(we think we don't need them)
+Wire Wire Line
+	2400 1250 2650 1250
+Text Notes 1900 1750 0    49   ~ 0
+2 5v okis
+Text Notes 2300 3850 0    49   ~ 0
+Add sections from the eagle board,\nuse 3v3 from the tiva after giving it 5v,\nno sensor conditioning (from eagle board),\nadd Mag inputs for linear encoder
+Text GLabel 2400 1000 0    49   Input ~ 0
+PVDD
+Wire Wire Line
+	2400 1000 2650 1000
 $EndSCHEMATC
