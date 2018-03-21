@@ -351,7 +351,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 1200 9100 1200
 Wire Notes Line
-	1750 500  10000 500 
+	600  500  10000 500 
 Wire Notes Line
 	7650 1650 10000 1650
 Wire Notes Line
@@ -418,60 +418,215 @@ Wire Wire Line
 $Comp
 L OKI U?
 U 1 1 5AB04F9D
-P 2700 2200
-F 0 "U?" H 2550 1950 60  0001 C CNN
-F 1 "5V OKI" H 2850 2550 60  0000 C CNN
-F 2 "" H 2450 2100 60  0001 C CNN
-F 3 "" H 2450 2100 60  0001 C CNN
-	1    2700 2200
+P 1950 2200
+F 0 "U?" H 1800 1950 60  0001 C CNN
+F 1 "5V OKI" H 2100 2550 60  0000 C CNN
+F 2 "" H 1700 2100 60  0001 C CNN
+F 3 "" H 1700 2100 60  0001 C CNN
+	1    1950 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Anderson_3 C?
 U 1 1 5AB04FDB
-P 2750 1600
-F 0 "C?" H 2800 1550 60  0000 C CNN
-F 1 "Anderson_3" H 2900 2350 60  0000 C CNN
-F 2 "" H 2800 1050 60  0001 C CNN
-F 3 "" H 2800 1050 60  0001 C CNN
-	1    2750 1600
+P 2200 1400
+F 0 "C?" H 2250 1350 60  0000 C CNN
+F 1 "Anderson_3" H 2350 2150 60  0000 C CNN
+F 2 "" H 2250 850 60  0001 C CNN
+F 3 "" H 2250 850 60  0001 C CNN
+	1    2200 1400
 	1    0    0    -1  
 $EndComp
-Text Notes 1800 700  0    98   ~ 0
+Text Notes 650  700  0    98   ~ 0
 Power
-Wire Notes Line
-	1750 500  1750 2350
-Wire Notes Line
-	1750 2350 4000 2350
 $Comp
 L GND #PWR?
 U 1 1 5AB05B69
-P 2300 2100
-F 0 "#PWR?" H 2300 1850 50  0001 C CNN
-F 1 "GND" H 2300 1950 50  0000 C CNN
-F 2 "" H 2300 2100 50  0001 C CNN
-F 3 "" H 2300 2100 50  0001 C CNN
-	1    2300 2100
+P 1100 2100
+F 0 "#PWR?" H 1100 1850 50  0001 C CNN
+F 1 "GND" H 1100 1950 50  0000 C CNN
+F 2 "" H 1100 2100 50  0001 C CNN
+F 3 "" H 1100 2100 50  0001 C CNN
+	1    1100 2100
+	1    0    0    -1  
+$EndComp
+Text GLabel 1850 1050 0    49   Input ~ 0
+LOGIC-12V
+Text Notes 6100 3650 0    49   ~ 0
+Connect all GNDs
+Text Notes -1450 2200 0    49   ~ 0
+Contact Nicole and Rausch about flap \nand carosal labels in eagle schematic for last\nyears board\n(we think we don't need them)
+Wire Wire Line
+	1850 1050 2100 1050
+Text Notes 2050 4000 0    49   ~ 0
+Add sections from the eagle board,\nuse 3v3 from the tiva after giving it 5v,\nno sensor conditioning (from eagle board),\nadd Mag inputs for linear encoder
+Text GLabel 1850 800  0    49   Input ~ 0
+ACT-12V
+Wire Wire Line
+	1850 800  2100 800 
+$Comp
+L GND #PWR?
+U 1 1 5AB1C63A
+P 2000 1350
+F 0 "#PWR?" H 2000 1100 50  0001 C CNN
+F 1 "GND" H 2000 1200 50  0000 C CNN
+F 2 "" H 2000 1350 50  0001 C CNN
+F 3 "" H 2000 1350 50  0001 C CNN
+	1    2000 1350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 2100 2300 2050
+	2000 1350 2000 1300
 Wire Wire Line
-	2300 2050 2500 2050
-Text GLabel 2400 1250 0    49   Input ~ 0
-PVDD
-Text Notes 6100 3650 0    49   ~ 0
-Connect all GNDs
-Text Notes 2000 2750 0    49   ~ 0
-Contact Nicole and Rausch about flap \nand carosal labels in eagle schematic for last\nyears board\n(we think we don't need them)
+	2000 1300 2100 1300
+Text GLabel 1250 1700 0    49   Input ~ 0
+LOGIC-12V
+$Comp
+L CP C?
+U 1 1 5AB1C78D
+P 1400 1850
+F 0 "C?" H 1425 1950 50  0000 L CNN
+F 1 "10uF" H 1425 1750 50  0000 L CNN
+F 2 "" H 1438 1700 50  0001 C CNN
+F 3 "" H 1400 1850 50  0001 C CNN
+	1    1400 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 1700
 Wire Wire Line
-	2400 1250 2650 1250
-Text Notes 1900 1750 0    49   ~ 0
-2 5v okis
-Text Notes 2300 3850 0    49   ~ 0
-Add sections from the eagle board,\nuse 3v3 from the tiva after giving it 5v,\nno sensor conditioning (from eagle board),\nadd Mag inputs for linear encoder
-Text GLabel 2400 1000 0    49   Input ~ 0
-PVDD
+	1100 2050 1100 2100
 Wire Wire Line
-	2400 1000 2650 1000
+	1750 1700 1750 1950
+$Comp
+L CP C?
+U 1 1 5AB1CD8C
+P 1400 2250
+F 0 "C?" H 1425 2350 50  0000 L CNN
+F 1 "22uF" H 1425 2150 50  0000 L CNN
+F 2 "" H 1438 2100 50  0001 C CNN
+F 3 "" H 1400 2250 50  0001 C CNN
+	1    1400 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1250 1700 1750 1700
+Wire Wire Line
+	1400 2000 1400 2100
+Wire Wire Line
+	1100 2050 1750 2050
+Connection ~ 1400 2050
+Wire Wire Line
+	1250 2400 1750 2400
+Wire Wire Line
+	1750 2150 1750 2700
+Text GLabel 1250 2400 0    49   Input ~ 0
+LOGIC-5V
+Connection ~ 1400 2400
+$Comp
+L R R?
+U 1 1 5AB1D544
+P 1600 2700
+F 0 "R?" V 1680 2700 50  0000 C CNN
+F 1 "1k" V 1600 2700 50  0000 C CNN
+F 2 "" V 1530 2700 50  0001 C CNN
+F 3 "" H 1600 2700 50  0001 C CNN
+	1    1600 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AB1D58B
+P 1100 2800
+F 0 "#PWR?" H 1100 2550 50  0001 C CNN
+F 1 "GND" H 1100 2650 50  0000 C CNN
+F 2 "" H 1100 2800 50  0001 C CNN
+F 3 "" H 1100 2800 50  0001 C CNN
+	1    1100 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED PWR
+U 1 1 5AB1D5E0
+P 1300 2700
+F 0 "PWR" H 1300 2800 50  0000 C CNN
+F 1 "LED" H 1300 2600 50  0000 C CNN
+F 2 "" H 1300 2700 50  0001 C CNN
+F 3 "" H 1300 2700 50  0001 C CNN
+	1    1300 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 2700 1100 2700
+Wire Wire Line
+	1100 2700 1100 2800
+Connection ~ 1750 2400
+$Comp
+L OKI U?
+U 1 1 5AB1DAC9
+P 3500 2200
+F 0 "U?" H 3350 1950 60  0001 C CNN
+F 1 "5V OKI" H 3650 2550 60  0000 C CNN
+F 2 "" H 3250 2100 60  0001 C CNN
+F 3 "" H 3250 2100 60  0001 C CNN
+	1    3500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AB1DACF
+P 2650 2100
+F 0 "#PWR?" H 2650 1850 50  0001 C CNN
+F 1 "GND" H 2650 1950 50  0000 C CNN
+F 2 "" H 2650 2100 50  0001 C CNN
+F 3 "" H 2650 2100 50  0001 C CNN
+	1    2650 2100
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 1700 0    49   Input ~ 0
+ACT-12V
+$Comp
+L CP C?
+U 1 1 5AB1DAD6
+P 2950 1850
+F 0 "C?" H 2975 1950 50  0000 L CNN
+F 1 "10uF" H 2975 1750 50  0000 L CNN
+F 2 "" H 2988 1700 50  0001 C CNN
+F 3 "" H 2950 1850 50  0001 C CNN
+	1    2950 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 2950 1700
+Wire Wire Line
+	2650 2050 2650 2100
+Wire Wire Line
+	3300 1700 3300 1950
+$Comp
+L CP C?
+U 1 1 5AB1DADF
+P 2950 2250
+F 0 "C?" H 2975 2350 50  0000 L CNN
+F 1 "22uF" H 2975 2150 50  0000 L CNN
+F 2 "" H 2988 2100 50  0001 C CNN
+F 3 "" H 2950 2250 50  0001 C CNN
+	1    2950 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 1700 3300 1700
+Wire Wire Line
+	2950 2000 2950 2100
+Wire Wire Line
+	2650 2050 3300 2050
+Connection ~ 2950 2050
+Wire Wire Line
+	2800 2400 3300 2400
+Text GLabel 2800 2400 0    49   Input ~ 0
+ACT-5V
+Connection ~ 2950 2400
+Wire Wire Line
+	3300 2400 3300 2150
+Wire Notes Line
+	600  500  600  3150
+Wire Notes Line
+	600  3150 4000 3150
 $EndSCHEMATC
