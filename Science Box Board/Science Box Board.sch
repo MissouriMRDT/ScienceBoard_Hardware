@@ -41,7 +41,6 @@ LIBS:MRDT_Passives
 LIBS:MRDT_Shields
 LIBS:MRDT_Silkscreens
 LIBS:MRDT_Switches
-LIBS:Science Signals Booster-cache
 EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
@@ -59,14 +58,14 @@ $EndDescr
 Text Notes 7200 7650 0    98   ~ 0
 Laser Control
 $Comp
-L Molex_SL-10 U11
+L Molex_SL_10 U11
 U 1 1 5AA82860
-P 14100 4200
-F 0 "U11" H 14150 4150 60  0001 C CNN
-F 1 "Molex_SL-10" H 14300 4750 60  0000 C CNN
-F 2 "MRDT_Connectors:MOLEX_SL_10_Horizontal" H 14100 4200 60  0001 C CNN
-F 3 "" H 14100 4200 60  0001 C CNN
-	1    14100 4200
+P 14100 4700
+F 0 "U11" H 14150 4650 60  0001 C CNN
+F 1 "Molex_SL-10" H 14300 5250 60  0000 C CNN
+F 2 "MRDT_Connectors:MOLEX_SL_10_Horizontal" H 14100 4700 60  0001 C CNN
+F 3 "" H 14100 4700 60  0001 C CNN
+	1    14100 4700
 	1    0    0    -1  
 $EndComp
 Text GLabel 13600 4050 0    49   Input ~ 0
@@ -135,26 +134,15 @@ F 3 "" H 5000 1850 60  0001 C CNN
 $EndComp
 Text Notes 2550 1700 0    98   ~ 0
 Power
-$Comp
-L GND #PWR01
-U 1 1 5AB05B69
-P 3300 3150
-F 0 "#PWR01" H 3300 2900 50  0001 C CNN
-F 1 "GND" H 3300 3000 50  0000 C CNN
-F 2 "" H 3300 3150 50  0001 C CNN
-F 3 "" H 3300 3150 50  0001 C CNN
-	1    3300 3150
-	1    0    0    -1  
-$EndComp
 Text GLabel 4600 2050 0    49   Input ~ 0
 LOGIC-12V
 Text GLabel 4600 2300 0    49   Input ~ 0
 ACT-12V
 $Comp
-L GND #PWR02
+L GND #PWR01
 U 1 1 5AB1C63A
 P 4750 1850
-F 0 "#PWR02" H 4750 1600 50  0001 C CNN
+F 0 "#PWR01" H 4750 1600 50  0001 C CNN
 F 1 "GND" H 4750 1700 50  0000 C CNN
 F 2 "" H 4750 1850 50  0001 C CNN
 F 3 "" H 4750 1850 50  0001 C CNN
@@ -198,17 +186,6 @@ F 3 "" H 6300 3150 60  0001 C CNN
 	1    6550 3250
 	1    0    0    -1  
 $EndComp
-$Comp
-L GND #PWR03
-U 1 1 5AB1DACF
-P 5700 3150
-F 0 "#PWR03" H 5700 2900 50  0001 C CNN
-F 1 "GND" H 5700 3000 50  0000 C CNN
-F 2 "" H 5700 3150 50  0001 C CNN
-F 3 "" H 5700 3150 50  0001 C CNN
-	1    5700 3150
-	1    0    0    -1  
-$EndComp
 Text GLabel 5850 2750 0    49   Input ~ 0
 ACT-12V
 Text GLabel 5850 3450 0    49   Input ~ 0
@@ -225,7 +202,7 @@ F 3 "" H 4850 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Molex_SL-2 U1
+L Molex_SL_2 U1
 U 1 1 5AB1FE22
 P 3400 5150
 F 0 "U1" H 3450 5100 60  0001 C CNN
@@ -234,17 +211,6 @@ F 2 "MRDT_Connectors:MOLEX_SL_2_Horizontal" H 3400 5050 60  0001 C CNN
 F 3 "" H 3400 5050 60  0001 C CNN
 	1    3400 5150
 	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR04
-U 1 1 5AB1FECA
-P 3700 5350
-F 0 "#PWR04" H 3700 5100 50  0001 C CNN
-F 1 "GND" H 3700 5200 50  0000 C CNN
-F 2 "" H 3700 5350 50  0001 C CNN
-F 3 "" H 3700 5350 50  0001 C CNN
-	1    3700 5350
-	1    0    0    -1  
 $EndComp
 Text GLabel 3550 4600 0    49   Input ~ 0
 LOGIC-5V
@@ -294,17 +260,6 @@ F 3 "" H 5750 5100 50  0001 C CNN
 $EndComp
 Text GLabel 5000 4650 1    49   Input ~ 0
 LOGIC-5V
-$Comp
-L GND #PWR05
-U 1 1 5AB21586
-P 5400 5650
-F 0 "#PWR05" H 5400 5400 50  0001 C CNN
-F 1 "GND" H 5400 5500 50  0000 C CNN
-F 2 "" H 5400 5650 50  0001 C CNN
-F 3 "" H 5400 5650 50  0001 C CNN
-	1    5400 5650
-	1    0    0    -1  
-$EndComp
 Text GLabel 6250 7600 2    49   Output ~ 0
 PHOTODIODE_2
 $Comp
@@ -319,7 +274,7 @@ F 3 "" H 4900 7800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Molex_SL-2 U2
+L Molex_SL_2 U2
 U 1 1 5AB21C1D
 P 3450 7650
 F 0 "U2" H 3500 7600 60  0001 C CNN
@@ -328,17 +283,6 @@ F 2 "MRDT_Connectors:MOLEX_SL_2_Horizontal" H 3450 7550 60  0001 C CNN
 F 3 "" H 3450 7550 60  0001 C CNN
 	1    3450 7650
 	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR06
-U 1 1 5AB21C23
-P 3750 7850
-F 0 "#PWR06" H 3750 7600 50  0001 C CNN
-F 1 "GND" H 3750 7700 50  0000 C CNN
-F 2 "" H 3750 7850 50  0001 C CNN
-F 3 "" H 3750 7850 50  0001 C CNN
-	1    3750 7850
-	1    0    0    -1  
 $EndComp
 Text GLabel 3600 7100 0    49   Input ~ 0
 LOGIC-5V
@@ -377,17 +321,6 @@ F 3 "" H 4750 8350 50  0001 C CNN
 $EndComp
 Text GLabel 5050 7150 1    49   Input ~ 0
 LOGIC-5V
-$Comp
-L GND #PWR07
-U 1 1 5AB21C78
-P 5450 8150
-F 0 "#PWR07" H 5450 7900 50  0001 C CNN
-F 1 "GND" H 5450 8000 50  0000 C CNN
-F 2 "" H 5450 8150 50  0001 C CNN
-F 3 "" H 5450 8150 50  0001 C CNN
-	1    5450 8150
-	1    0    0    -1  
-$EndComp
 Text GLabel 8800 7800 0    49   Input ~ 0
 ACT-12V
 $Comp
@@ -494,8 +427,6 @@ Text GLabel 14750 2250 2    49   Input ~ 0
 ACT-5V
 Text Notes 12250 1700 0    98   ~ 0
 Spectrometer Motor
-Text Notes 12300 2750 0    39   ~ 0
-Need TIVA pins selected for IN1, IN2\n(This implementation is based on last years\nboard which connected to the same motor)
 Wire Wire Line
 	8400 5150 8600 5150
 Wire Wire Line
@@ -544,8 +475,6 @@ Wire Wire Line
 	4750 1800 4850 1800
 Connection ~ 3600 2750
 Wire Wire Line
-	3300 3100 3300 3150
-Wire Wire Line
 	3950 2750 3950 3000
 Wire Wire Line
 	3450 2750 3950 2750
@@ -564,8 +493,6 @@ Wire Wire Line
 Connection ~ 3950 3450
 Connection ~ 6000 2750
 Wire Wire Line
-	5700 3100 5700 3150
-Wire Wire Line
 	6350 2750 6350 3000
 Wire Wire Line
 	5850 2750 6350 2750
@@ -583,8 +510,6 @@ Wire Notes Line
 	2500 4150 7150 4150
 Wire Wire Line
 	3600 5300 3700 5300
-Wire Wire Line
-	3700 5300 3700 5350
 Wire Wire Line
 	3600 5200 4550 5200
 Wire Wire Line
@@ -630,19 +555,14 @@ Wire Wire Line
 Wire Wire Line
 	5450 4750 5450 5600
 Wire Wire Line
-	5450 5600 4750 5600
+	4750 5600 5700 5600
 Wire Wire Line
 	4750 5600 4750 5400
-Wire Wire Line
-	5400 5600 5400 5650
-Connection ~ 5400 5600
 Wire Wire Line
 	4750 4750 4750 4800
 Connection ~ 5000 4750
 Wire Wire Line
 	3650 7800 3750 7800
-Wire Wire Line
-	3750 7800 3750 7850
 Wire Wire Line
 	3650 7700 4600 7700
 Wire Wire Line
@@ -688,12 +608,9 @@ Wire Wire Line
 Wire Wire Line
 	5500 7250 5500 8100
 Wire Wire Line
-	5500 8100 4800 8100
+	4800 8100 5750 8100
 Wire Wire Line
 	4800 8100 4800 7900
-Wire Wire Line
-	5450 8100 5450 8150
-Connection ~ 5450 8100
 Wire Wire Line
 	4800 7250 4800 7300
 Connection ~ 5050 7250
@@ -793,8 +710,6 @@ Wire Notes Line
 	13750 7450 13750 9050
 Wire Notes Line
 	12200 3100 15150 3100
-Text Notes 12800 5950 0    39   ~ 0
-Need TIVA pins selected for magINC, magDEC
 Wire Notes Line
 	12200 5300 15150 5300
 $Comp
@@ -1018,4 +933,22 @@ Text GLabel 4650 6750 2    60   UnSpc ~ 0
 GND
 Text GLabel 10450 8800 3    60   UnSpc ~ 0
 GND
+Text GLabel 3300 3100 0    60   UnSpc ~ 0
+GND
+Text GLabel 5700 3100 0    60   UnSpc ~ 0
+GND
+Text GLabel 3700 5300 2    60   UnSpc ~ 0
+GND
+Text GLabel 3750 7800 2    60   UnSpc ~ 0
+GND
+Connection ~ 5500 8100
+Text GLabel 5750 8100 2    60   UnSpc ~ 0
+GND
+Connection ~ 5450 5600
+Text GLabel 5700 5600 2    60   UnSpc ~ 0
+GND
+Text GLabel 8600 5550 0    60   Output ~ 0
++3V3
+Text GLabel 9500 5550 2    49   Output ~ 0
+LOGIC-5V
 $EndSCHEMATC
