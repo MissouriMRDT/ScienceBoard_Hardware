@@ -3,7 +3,7 @@
   (general
     (links 102)
     (no_connects 2)
-    (area 117.933399 71.349799 242.543401 152.779801)
+    (area 117.5584 71.098999 242.798201 152.979801)
     (thickness 1.6)
     (drawings 29)
     (tracks 274)
@@ -46,7 +46,7 @@
   )
 
   (setup
-    (last_trace_width 0.4064)
+    (last_trace_width 0.25)
     (user_trace_width 0.254)
     (user_trace_width 0.4064)
     (user_trace_width 0.762)
@@ -1889,7 +1889,7 @@
   )
 
   (module MRDT_Silkscreens:Andrew_Van_Horn_Sig_15mm (layer F.Cu) (tedit 5AAFF5D6) (tstamp 5AB9769D)
-    (at 189.23 140.97)
+    (at 189.23 140.716)
     (fp_text reference G*** (at 0 2.413) (layer F.Fab) hide
       (effects (font (size 0.5 0.5) (thickness 0.125)))
     )
