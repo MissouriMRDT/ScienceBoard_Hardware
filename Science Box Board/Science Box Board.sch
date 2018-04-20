@@ -202,17 +202,6 @@ F 3 "" H 4850 5300 50  0001 C CNN
 	1    4850 5100
 	1    0    0    -1  
 $EndComp
-$Comp
-L Molex_SL_2 U1
-U 1 1 5AB1FE22
-P 3400 5150
-F 0 "U1" H 3450 5100 60  0001 C CNN
-F 1 "Molex_SL-2" H 3450 5400 60  0000 C CNN
-F 2 "MRDT_Connectors:MOLEX_SL_2_Horizontal" H 3400 5050 60  0001 C CNN
-F 3 "" H 3400 5050 60  0001 C CNN
-	1    3400 5150
-	-1   0    0    1   
-$EndComp
 Text GLabel 3550 4600 0    49   Input ~ 0
 LOGIC-5V
 $Comp
@@ -273,17 +262,6 @@ F 2 "TO_SOT_Packages_SMD:SOT-23-5_HandSoldering" H 4900 7600 50  0001 C CNN
 F 3 "" H 4900 7800 50  0001 C CNN
 	1    4900 7600
 	1    0    0    -1  
-$EndComp
-$Comp
-L Molex_SL_2 U2
-U 1 1 5AB21C1D
-P 3450 7650
-F 0 "U2" H 3500 7600 60  0001 C CNN
-F 1 "Molex_SL-2" H 3500 7900 60  0000 C CNN
-F 2 "MRDT_Connectors:MOLEX_SL_2_Horizontal" H 3450 7550 60  0001 C CNN
-F 3 "" H 3450 7550 60  0001 C CNN
-	1    3450 7650
-	-1   0    0    1   
 $EndComp
 Text GLabel 3600 7100 0    49   Input ~ 0
 LOGIC-5V
@@ -510,9 +488,7 @@ Wire Wire Line
 Wire Notes Line
 	2500 4150 7150 4150
 Wire Wire Line
-	3600 5300 3700 5300
-Wire Wire Line
-	3600 5200 4550 5200
+	3550 5200 4550 5200
 Wire Wire Line
 	3550 4600 3650 4600
 Wire Wire Line
@@ -563,9 +539,7 @@ Wire Wire Line
 	4750 4750 4750 4800
 Connection ~ 5000 4750
 Wire Wire Line
-	3650 7800 3750 7800
-Wire Wire Line
-	3650 7700 4600 7700
+	3550 7700 4600 7700
 Wire Wire Line
 	3600 7100 3700 7100
 Wire Wire Line
@@ -938,9 +912,9 @@ Text GLabel 3300 3100 0    60   UnSpc ~ 0
 GND
 Text GLabel 5700 3100 0    60   UnSpc ~ 0
 GND
-Text GLabel 3700 5300 2    60   UnSpc ~ 0
+Text GLabel 3550 5400 2    60   UnSpc ~ 0
 GND
-Text GLabel 3750 7800 2    60   UnSpc ~ 0
+Text GLabel 3550 7900 2    60   UnSpc ~ 0
 GND
 Connection ~ 5500 8100
 Text GLabel 5750 8100 2    60   UnSpc ~ 0
@@ -952,4 +926,30 @@ Text GLabel 8600 5550 0    60   Output ~ 0
 +3V3
 Text GLabel 9500 5550 2    49   Output ~ 0
 LOGIC-5V
+$Comp
+L Molex_SL_3 Conn?
+U 1 1 5AD93F33
+P 3350 5150
+F 0 "Conn?" H 3400 5100 60  0001 C CNN
+F 1 "Molex_SL_3" H 3400 5500 60  0000 C CNN
+F 2 "" H 3350 5150 60  0001 C CNN
+F 3 "" H 3350 5150 60  0001 C CNN
+	1    3350 5150
+	-1   0    0    1   
+$EndComp
+Text GLabel 3550 5300 2    60   Input ~ 0
++3V3
+$Comp
+L Molex_SL_3 Conn?
+U 1 1 5AD94E13
+P 3350 7650
+F 0 "Conn?" H 3400 7600 60  0001 C CNN
+F 1 "Molex_SL_3" H 3400 8000 60  0000 C CNN
+F 2 "" H 3350 7650 60  0001 C CNN
+F 3 "" H 3350 7650 60  0001 C CNN
+	1    3350 7650
+	-1   0    0    1   
+$EndComp
+Text GLabel 3550 7800 2    60   Input ~ 0
++3V3
 $EndSCHEMATC
